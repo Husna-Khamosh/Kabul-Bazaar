@@ -1,0 +1,893 @@
+.admin-container{
+    display:flex;
+    background-color:#ffffff;
+    border-radius: 30px 30px 30px 30px;
+}
+.admin-sidebar{
+    width: 250px;
+    height: 100vh;
+    background-color: #123E5C;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px 0 0 30px;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.site-name h2 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 12px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.admin-profile {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-image {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.admin-info h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.admin-info span {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.main-content{
+    flex: 1;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.Dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+.title h2{
+    margin: 0;
+    font-size: 22px;
+    color: #123E5C;
+}
+.title p{
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #8a9aa5;
+}
+.header-action input{
+    width: 180px;
+    padding: 11px 16px;
+
+    border: none;
+    outline: none;
+
+    background-color: #f1f3f5;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+}
+.header-action button{
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #123E5C;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+.stat-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+.stat-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 15px;
+    height: 115px;
+    box-sizing: border-box;
+}
+.stat-card p {
+    margin: 0 0 6px;
+    font-size: 13px;
+}
+
+.stat-card h2 {
+    margin: 0 0 5px;
+    font-size: 26px;
+}
+
+.stat-card span {
+    font-size: 12px;
+}
+.Chart-Container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding:20px;
+}
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 20px 20px;
+}
+
+
+/* =========================
+   Chart Cards
+========================= */
+
+.chart-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+/* =========================
+   Chart Title
+========================= */
+
+.chart-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #123E5C;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Commission Amount
+========================= */
+
+.chart-amount {
+    text-align: right;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Bar Chart
+========================= */
+
+.bar-chart {
+    height: 180px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 7px;
+}
+
+
+.bar {
+    width: 35px;
+
+    background-color: #2d91c5;
+
+    border-radius: 5px 5px 0 0;
+}
+
+
+/* Bar Heights */
+
+.bar-1 {
+    height: 55px;
+}
+
+.bar-2 {
+    height: 80px;
+}
+
+.bar-3 {
+    height: 62px;
+}
+
+.bar-4 {
+    height: 105px;
+}
+
+.bar-5 {
+    height: 90px;
+}
+
+.bar-6 {
+    height: 130px;
+}
+
+.bar-7 {
+    height: 140px;
+}
+
+.bar-8 {
+    height: 95px;
+}
+
+.bar-9 {
+    height: 110px;
+}
+
+.bar-10 {
+    height: 85px;
+}
+
+.bar-11 {
+    height: 125px;
+}
+
+.bar-12 {
+    height: 142px;
+}
+
+.bar-13 {
+    height: 118px;
+}
+
+.bar-14 {
+    height: 135px;
+}
+
+
+/* =========================
+   Shop List
+========================= */
+
+.shop {
+    margin-bottom: 18px;
+}
+
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+.shop-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.shop-icon {
+    width: 32px;
+    height: 32px;
+
+    background-color: #edf4f8;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 12px;
+
+    color: #37718e;
+}
+
+
+.shop-price {
+    font-weight: bold;
+    color: #123E5C;
+}
+
+
+/* =========================
+   Progress Bar
+========================= */
+
+.progress {
+    width: 100%;
+    height: 5px;
+
+    background-color: #e8e8e8;
+
+    border-radius: 10px;
+}
+
+
+.progress span {
+    display: block;
+
+    height: 100%;
+
+    background-color: #00658e;
+
+    border-radius: 10px;
+}
+
+
+.progress-100 {
+    width: 100%;
+}
+
+.progress-77 {
+    width: 77%;
+}
+
+.progress-60 {
+    width: 60%;
+}
+
+.progress-45 {
+    width: 45%;
+}
+
+.progress-25 {
+    width: 25%;
+}
+
+
+.queue-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.queue-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.queue-background{
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 0 20px 20px;
+    box-sizing: border-box;
+    
+}
+
+
+/* shop page */
+
+.buttons{
+    margin: 18px;
+}
+
+.buttons button{
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #123E5C;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*cards in shop page*/
+
+.applications {
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.application-card {
+  width: 100%;
+  min-height: 56px;
+
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 220px auto;
+  align-items: center;
+
+  padding: 11px 12px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.shop-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shop-avatar {
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: #eef6fa;
+
+  color: #0b6b9d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.shop-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shop-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.shop-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.shop-meta {
+  font-size: 8px;
+  color: #7c8799;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 7px;
+  border-radius: 8px;
+
+  font-size: 7px;
+  font-weight: 500;
+}
+
+/* Review  */
+.status.review {
+  background: #fff0d9;
+  color: #c47a11;
+}
+
+/* Pending */
+.status.pending {
+  background: #fff0d9;
+  color: #c47a11;
+}
+
+/* Suspended  */
+.status.suspended {
+  background: #ffe0e5;
+  color: #d83b58;
+}
+
+.document-status {
+  font-size: 8px;
+  color: #718096;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.actions button {
+  height: 27px;
+  border-radius: 15px;
+
+  padding: 0 12px;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.approve-btn {
+  border: 1px solid #096b9c;
+  background: #096b9c;
+  color: #ffffff;
+}
+
+.approve-btn:hover {
+  background: #07577f;
+  border-color: #07577f;
+}
+
+.reject-btn {
+  border: 1px solid #dfe4ea;
+  background: #ffffff;
+  color: #64748b;
+}
+
+.reject-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.Commission-cards{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    padding:20px;
+    
+}
+.Commission-card{
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 15px;
+    height: 115px;
+    box-sizing: border-box;
+    
+}
+.commission-card p{
+    margin: 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: gray;
+}
+.default-rate {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 20px 20px;
+}
+
+.default-rate h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    color: #123E5C;
+}
+
+.rate-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rate-content button {
+    width: 98px;
+    height: 48px;
+
+    background-color: white;
+    border: 2px solid #68a8ce;
+    border-radius: 10px;
+
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rate-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #718096;
+}
+
+.rates-cards{
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 15px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 0 20px 20px;
+}
+
+.rates-cards h3{
+    padding: 1px;
+    margin: 1px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.shop-row{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+}
+.shop-info{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+}
+.shop-icon{
+    width: 32px;
+    height: 32px;
+}
+.shop-name{
+    bold: bold;
+}
+.shop-row button{
+    width: 98px;
+    height: 30px;
+    background-color: white;
+    border: 2px solid #80878c;
+    border-radius: 10px;
+
+    color: #111;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*category page*/
+.main-categories{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    padding: 10px;
+    
+}
+.category-tree {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 10px;
+    
+    box-sizing: border-box;
+    margin: 0 20px 20px;
+}
+.category-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.category-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.category-name {
+    margin: 0;
+}
+.amount {
+    margin: 0;
+    color: #718096;
+    
+}
+.edit-category{
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.edit-category-info {
+    display: flex;
+    flex-direction: column;
+}
+.edit-category-info h4{
+    color: gray;
+    font-size: 10px;
+    
+}
+.edit-category-info input{
+    border: 1px solid #98a2b1;
+    border-radius: 5px;
+    height: 40px;
+    color: black;
+}
+.buttonss{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    gap: 5px;
+}
+.saveButton button{
+    width: 450px;
+    border-radius: 5px;
+    height: 30px;
+    color:white;
+    background-color: #123E5C; 
+
+}
+.deleteButton button{
+    width: 100px;
+    border-radius: 5px;
+    color: red;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #98a2b1;
+}
+
+/* Review Page */
+
+.reported-review {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px 20px;
+}
+
+.reported-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+/* top card*/
+
+.report-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.report-avatar {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    background: #eef6fa;
+    color: #0b6b9d;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.report-info {
+    flex: 1;
+}
+
+.report-info h5 {
+    margin: 0 0 4px;
+    font-size: 13px;
+}
+
+.report-info p {
+    margin: 0;
+    font-size: 11px;
+    color: #718096;
+}
+
+.reported-status {
+    padding: 6px 12px;
+    background-color: #fff7df;
+    border: 1px solid #f3c46b;
+    border-radius: 8px;
+    color: #a66b00;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/*  text Review */
+
+.review-text {
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+
+/* 3 buttons*/
+
+.report-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.report-actions button {
+    padding: 7px 13px;
+    border-radius: 7px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.view-button {
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.approve-button {
+    background-color: #eef8f1;
+    border: 1px solid #a8d5b5;
+    color: #28723b;
+}
+
+.delete-button {
+    background-color: #fff1f2;
+    border: 1px solid #f0b5bb;
+    color: #b4232d;
+}
