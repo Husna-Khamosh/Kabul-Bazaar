@@ -1,30 +1,125 @@
 .store-container{
-    display:flex;
-    background-color:#ffffff;
-    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 30px;
 }
-.store-sidebar{
-    width: 1000px;
+
+.left-side{
+    width: 1100px;
     height: 100vh;
     background-color: #123E5C;
     color: white;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 30px 0 0 30px;
-}
-.sidebar-header{
+
     display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.logo img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+    flex-direction: column;
 }
 
-.site-name h2 {
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-content {
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 400px;
+}
+
+.hero-content h1{
+    margin: 0 0 15px;
+    color: white;
+    font-size: 30px;
+}
+
+.hero-content p{
     margin: 0;
-    font-size: 20px;
-    letter-spacing: 1px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/*right side*/
+.right-side{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: center;  /*از نظر افقی محتویات را در وسط قرار میدهد*/
+    align-items: center; /* از نظر عمودی محتویات را در وسط قرار میدهد*/
+
+}
+.login-form{
+    max-width: 300px;
+    
+}
+.login-header h2{
+   margin: 0 0 15px;
+}
+.login-header p{
+    margin-top: 5px;
+    color: gray;
+    font-size: 10px;
+}
+.login-field{
+    display: flex;
+    flex-direction: column;
+    
+}
+.login-field h5{
+    color: gray;
+    margin-bottom: 5px;
+}
+.login-field input{
+    border-radius: 5px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid #9ea8b0;
+    cursor: pointer;
+}
+input:focus {
+    
+    border: 2px solid #216b9c;
+    outline: none;
+}
+.login-options{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 20px;
+}
+.login-options p {
+    margin: 0;
+    color: gray;
+    
+}
+.sign-btn{
+    background-color:#123E5C;
+    color: white;
+    width:300px;
+    height:35px;
+    border-radius: 5px;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    margin:8px;
+    color: gray;
+}
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #e5e5e5;
+}
+.log-google{
+    background-color:#123E5C;
+    color: white;
+    width:300px;
+    height:35px;
+    border-radius: 5px;
 }
