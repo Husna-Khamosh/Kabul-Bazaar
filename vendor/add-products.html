@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kabul Bazaar - Vendor-Portal-Add-Product</title>
+
+    <link rel="stylesheet" href="css/vendor.css">
+</head>
+
+<body bgcolor="#DCE6EC">
+
+    <div class="vendor-container">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="vendor-sidebar">
+
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+
+                <div class="logo">
+                    <!-- <img src="images/logo.png" alt="Kabul Bazaar Logo"> -->
+                    logo
+                </div>
+
+                <div class="site-name">
+                    <h2>KABUL BAZAAR</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Menu -->
+            <nav class="sidebar-menu">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="add-products.html">Add-Products</a>
+                    </li>
+
+                    <li>
+                        <a href="sub-orders.html">Sub-Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="discounts.html">Discounts</a>
+                    </li>
+
+                    <li>
+                        <a href="Payouts.html">Payouts</a>
+                    </li>
+                    <li>
+                        <a href="reviews.html">Reviews</a>
+                    </li>
+
+                    <li>
+                        <a href="shop-profile.html">Shop Profile</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Admin Profile -->
+            <div class="vendor-profile">
+
+                <div class="profile-image">
+                </div>
+
+                <div class="vendor-info">
+                    <h4>Husna Khamosh</h4>
+                    <span>Administrator</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <div class="main-content">
+
+            <!-- Dashboard Header -->
+            <div class="Dashboard-header">
+                <div class="title">
+                    <h2>Add Products</h2>
+                    <p>All Shapes - September 2026</p>
+                </div>
+                <div class="header-action">
+                    <input
+                        type="text"
+                        placeholder="Search">
+                    <button>
+                        Add Products
+                    </button>
+                </div>
+            </div>
+
+            <!--main Body-->
+
+            <div class="add-product-container">
+
+    <div class="add-product-left">
+
+        <form class="add-product-form">
+
+            <h3>Basics</h3>
+
+            <div class="product-name">
+                <h5>Product Name</h5>
+                <input type="text" placeholder="Enter Your Product Name here">
+            </div>
+
+            <div class="product-category-brand">
+
+                <div class="product-category">
+                    <h5>Category</h5>
+                    <input type="text" placeholder="Enter your Product Category here">
+                </div>
+
+                <div class="product-brand">
+                    <h5>Brand</h5>
+                    <input type="text" placeholder="Enter Your Product Brand here">
+                </div>
+
+            </div>
+
+            <div class="product-description">
+                <h5>Description</h5>
+                <input type="text" placeholder="Enter Your Description here">
+            </div>
+
+        </form>
+
+
+        <div class="product-variants">
+
+            <div class="variant-top">
+                <h3>Variants</h3>
+                <a href="add-variant.html">+ Add Variant</a>
+            </div>
+
+            <p class="variant-description">
+                Each variant keeps its own price and stock.
+                The storefront hides variants with zero stock.
+            </p>
+
+            <div class="variant-table">
+
+                <div class="variant-header">
+                    <span>COLOR</span>
+                    <span>TIP SIZE</span>
+                    <span>PRICE</span>
+                    <span>STOCK</span>
+                    <span>ACTIVE</span>
+                </div>
+
+                <div class="variant-row">
+                    <span>Midnight</span>
+                    <span>S</span>
+                    <span>AFN 3,250</span>
+                    <span>48</span>
+                    <span class="toggle active"></span>
+                </div>
+
+                <div class="variant-row">
+                    <span>Midnight</span>
+                    <span>M</span>
+                    <span>AFN 3,250</span>
+                    <span class="stock-zero">0</span>
+                    <span class="toggle"></span>
+                </div>
+
+                <div class="variant-row">
+                    <span>Ivory</span>
+                    <span>M</span>
+                    <span>AFN 3,350</span>
+                    <span>61</span>
+                    <span class="toggle active"></span>
+                </div>
+
+                <div class="variant-row">
+                    <span>Sand</span>
+                    <span>L</span>
+                    <span>AFN 3,350</span>
+                    <span>33</span>
+                    <span class="toggle active"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="add-product-right">
+
+        <div class="images-card">
+
+            <h3>Images</h3>
+
+            <div class="main-image">
+                <span>MAIN IMAGE</span>
+            </div>
+
+            <div class="image-options">
+                <div class="small-image"></div>
+                <div class="small-image"></div>
+                <div class="add-image">+</div>
+            </div>
+
+        </div>
+
+
+        <div class="publishing-card">
+
+            <h3>Publishing</h3>
+
+            <div class="publish-row">
+                <span>Status</span>
+                <strong>Draft</strong>
+            </div>
+
+            <div class="publish-row">
+                <span>Shop</span>
+                <strong>TechNest</strong>
+            </div>
+
+            <div class="publish-row">
+                <span>Commission</span>
+                <strong>15%</strong>
+            </div>
+
+            <div class="publish-note">
+                New products are reviewed by an admin before they appear in search.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+</html>

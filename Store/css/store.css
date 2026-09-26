@@ -1251,5 +1251,145 @@ margin-top: 0;
     background-color: white;
     border-radius: 10px;
     border:1px solid #d5dce1;
-    height: 400px;
+    height: 420px;
+}
+.rating-left-title{
+    display: flex;
+    direction: column;
+    gap: 5px;
+}
+.rating-left-title h1{
+    margin: 15px 0 0 20px;
+}
+.rating-left-title p{
+    margin: 30px 0 0 5px;
+    color: gray;
+}
+
+.rating-stars{
+    color:#d5dce1;
+    font-size:20px;
+    letter-spacing:2px;
+}
+.ratings{
+    margin:20px;
+}
+
+.rating-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+.rating-number{
+    width:15px;
+    color:#718096;
+}
+
+.rating-bar{
+    width:370px;
+    height:7px;
+    background-color:#e9edf0;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.rating-fill{
+    height:100%;
+    background-color:#f5c400;
+    border-radius:10px;
+}
+
+.rating-count{
+    color:#a0a8b0;
+    font-size:13px;
+    width:35px;
+    text-align:right;
+}
+.rating-review{
+    margin-left: 20px;
+}
+.rating-review h4{
+    margin-bottom:0px;
+}
+.submit-review-section{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.submit-review-section input{
+    height: 70px;
+    weight:200px;
+    margin-bottom: 10px; 
+    border-radius: 10px;
+}
+.submit-review-section button{
+    height: 30px;
+    weight:200px;
+    margin-bottom: 10px; 
+    border-radius: 10px;
+    background-color: #21516f;
+    color: white;
+    font-weight: bold;
+}
+.rating-right-header button{
+    background-color: #21516f;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.rating-carts{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid #d5dce1;
+    height: 150px;
+    margin-top: 20px;
+}
+.rating-carts-title{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #e5e7eb;
+}
+.rating-cart-title-left{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:10px;
+}
+.rating-carts-avatar {
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eef6fa;
+  color: #0b6b9d;
+  font-size: 10px;
+  font-weight: 700;
+}
+.rating-carts-title-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-right:15px;
+}
+.rating-carts-title-right span{
+    color: #ebb110;
+    
+}
+.rating-text{
+    padding:10px 15px;
+}
+
+.rating-text p{
+    margin:0;
 }
