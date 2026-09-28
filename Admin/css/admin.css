@@ -1,7 +1,11 @@
-.admin-container{
-    display:flex;
-    background-color:#ffffff;
-    border-radius: 30px 30px 30px 30px;
+body{
+    padding: 0;
+    margin: 0;
+}
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #ffffff;
 }
 .admin-sidebar{
     width: 250px;
@@ -10,7 +14,8 @@
     color: white;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 30px 0 0 30px;
+    position: fixed;
+    
 }
 
 .sidebar-header{
@@ -93,11 +98,13 @@
     opacity: 0.7;
 }
 
-.main-content{
+.main-content {
     flex: 1;
     background-color: white;
     border-radius: 25px;
     overflow: hidden;
+    margin-left: 250px;
+    
 }
 .Dashboard-header {
     display: flex;
@@ -183,10 +190,6 @@
 }
 
 
-/* =========================
-   Chart Cards
-========================= */
-
 .chart-card {
     background-color: white;
     border: 1px solid #e5e5e5;
@@ -194,10 +197,6 @@
     padding: 20px;
 }
 
-
-/* =========================
-   Chart Title
-========================= */
 
 .chart-title {
     font-size: 16px;
@@ -207,10 +206,6 @@
 }
 
 
-/* =========================
-   Commission Amount
-========================= */
-
 .chart-amount {
     text-align: right;
     color: #555;
@@ -219,9 +214,6 @@
 }
 
 
-/* =========================
-   Bar Chart
-========================= */
 
 .bar-chart {
     height: 180px;
@@ -242,7 +234,6 @@
 }
 
 
-/* Bar Heights */
 
 .bar-1 {
     height: 55px;
@@ -301,9 +292,7 @@
 }
 
 
-/* =========================
-   Shop List
-========================= */
+
 
 .shop {
     margin-bottom: 18px;
@@ -353,9 +342,7 @@
 }
 
 
-/* =========================
-   Progress Bar
-========================= */
+
 
 .progress {
     width: 100%;
@@ -411,6 +398,7 @@
     border-radius: 12px;
     padding: 20px;
     border: 1px solid #ddd;
+
 }
 .queue-background{
     background: white;
@@ -890,4 +878,159 @@
     background-color: #fff1f2;
     border: 1px solid #f0b5bb;
     color: #b4232d;
+}
+.menu-button {
+    background-color: #123E5C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*responsive*/
+
+@media (max-width: 1000px) {
+
+    .admin-sidebar {
+        width: 200px;
+    }
+
+    .site-name h2 {
+        font-size: 16px;
+    }
+
+    .stat-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .queue-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-action input {
+        width: 130px;
+    }
+    .menu-button {
+    display: none; /* در دسکتاپ مخفی باشد */
+}
+
+}
+
+
+
+@media (max-width: 700px) {
+    .menu-button {
+        display: block;
+    }
+
+    .admin-container {
+        display: block;
+        margin-left:0;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 10px 15px;
+    }
+
+    .sidebar-header {
+        justify-content: space-between;
+    }
+
+    .site-name h2 {
+        font-size: 16px;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
+
+    .admin-profile {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .Dashboard-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .header-action {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .header-action input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header-action button {
+        white-space: nowrap;
+    }
+
+    .stat-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+
+    .charts-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px 15px;
+    }
+
+    .chart-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .bar-chart {
+        gap: 3px;
+    }
+
+    .bar {
+        width: 100%;
+        max-width: 25px;
+    }
+
+ 
+    .queue-background {
+        margin: 0 15px 15px;
+    }
+
+    .queue-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .queue-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 }
