@@ -1276,8 +1276,6 @@ body {
 
 }
 
-
-
 @media (max-width: 700px) {
 
     
@@ -1332,9 +1330,6 @@ body {
 
 
     
-    #menu-toggle:checked ~ .admin-sidebar {
-        left: 0;
-    }
 
 
 
@@ -1690,4 +1685,8 @@ body {
     }
 
 }
-```
+
+    #menu-toggle:checked ~ .admin-sidebar {
+        left: 0;
+    }
+
