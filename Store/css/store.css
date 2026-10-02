@@ -458,9 +458,6 @@ a {
     padding: 0 20px;
 }
 
-/* -----------------------------------------------------------
-   Shop by category
-   ----------------------------------------------------------- */
 .section-title {
     margin: 30px 25px 12px;
     font-size: 20px;
@@ -1711,6 +1708,37 @@ margin-top: 0;
 }
 
 @media (max-width: 1000px) {
+   .left-side {
+        display: none;
+    }
+    .right-side {
+        width: 100%;
+        min-height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;    
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #ffffff; 
+    }
+    .login-options a{
+        display: inline
+    }
+    .login-options{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%;
+        gap: 10px; 
+    }
+    .right-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .left-side-header-bottom ul {
         display: flex;
         overflow-x: auto;
@@ -1724,38 +1752,42 @@ margin-top: 0;
     .order-title, .order-carts {
         margin: 15px 15px 0 15px;
     }
-    .payment-container{
+    .payment-container {
         display: flex;
         flex-direction: column;
-        margin- 15px;
-        
+        margin: 15px;
+        gap: 15px;
     }
-    .payment-left{
+
+    .payment-left {
         width: 100%;
         height: auto;
         margin-left: 0;
     }
-    .delivery-add-cart{
-        width: 850px;;
+
+    .delivery-add-cart {
+        width: calc(100% - 40px);
+        margin-left: 20px;
     }
-    .yourCart-right{
+
+    .yourCart-right {
         width: 100%;
         height: auto;
         margin-left: 0;
+        margin-right: 0;
     }
-    .address-info h3{
-        font-size: 15px;
+
+    .discount-section input {
+        width: 70%;
     }
-    .total-price h2,
-    .total-price h3
-    {
-        font-size: 18px;
-    } 
-    .checkout-btn{
-        width: 880px;
-        height: 50px;
+
+    .discount-section button {
+        width: 25%;
+    }
+
+    .checkout-btn {
+        width: calc(100% - 20px);
         margin-left: 10px;
-        
     }
     .delivery-add-cart {
         width: calc(100% - 40px);
@@ -1787,51 +1819,50 @@ margin-top: 0;
         height: 295px;
     }
 
-
     .product-details-container{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: calc(100% - 30px);
+        margin: 20px 15px;
         gap: 50px;
     }
-    .product-details-left{
-        width: 100%;
-    }
 
-    .product-details-right{
-        width: 100%;
-    }
-    .product-color{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        
-    }
-    .product-color h4{
-        border-bottom: none;
-    }
-    
-    .color-btn{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        
-    }
-    .product-size{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-    }
-    .size-btn{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
-    .product-size h4{
-        margin-top: 15px;
-    }
-    .cart-actions .add-to-cart-btn {
-        width: 540px;;
-    }
-    .cart-actions{
-        margin-bottom: 10px;
-    }
+.product-details-left{
+    width: 100%;
+    margin: 25px;
+}
+
+.product-details-right{
+    width: 100%;
+    margin: 25px;
+}
+
+.main-product-image{
+    width: 100%;
+    height: auto;
+}
+
+.product-photots{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.product-photots img{
+    width: 60px;
+    height: 60px;
+}
+
+.cart-actions{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.cart-actions .add-to-cart-btn{
+    width: 100%;
+}
+
     .rating-container{
         display: flex;
         flex-direction: column;
@@ -1861,12 +1892,42 @@ margin-top: 0;
     }
 }
 
+
 @media (max-width: 700px) {
+    
+    .left-side {
+        display: none;
+    }
+    .right-side {
+        width: 100%;
+        min-height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;    
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #ffffff; 
+    }
+    .login-options a{
+        display: inline
+    }
+    .login-options{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%;
+        gap: 10px; 
+    }
     .store-header {
         display: flex;
         flex-direction: column;
         padding: 15px;
         gap: 15px;
+    }
+    .login-form{
+    max-width: 400px;
+    
     }
     .left-side-header-top {
         display: flex;
@@ -1960,38 +2021,63 @@ margin-top: 0;
     .progress-step p {
         margin: 0;
         font-size: 13px;
+    }.payment-container {
+        margin: 10px;
     }
-    
+
+    .payment-progress {
+        gap: 8px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .payment-left {
+        width: 100%;
+    }
+
+    .delivery-add-cart {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+    }
+
+    .address-info h3 {
+        font-size: 14px;
+    }
+
+    .address-info p {
+        font-size: 11px;
+    }
+
+    .yourCart-right {
+        width: 100%;
+    }
+
+    .discount-section {
+        display: flex;
+        gap: 5px;
+        margin-right: 10px;
+    }
+
+    .discount-section input {
+        width: 70%;
+    }
+
+    .discount-section button {
+        width: 30%;
+    }
+
+    .checkout-btn {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+    }
+
 }
 
 
 
 
 @media(max-width: 700px){
-    .payment-container{
-        display: flex;
-        flex-direction: column;
-        margin- 15px;
-        
-    }
-    .payment-left{
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-    }
-    .address-info h3{
-        font-size: 15px;
-    }
-    .total-price h2,
-    .total-price h3
-    {
-        font-size: 18px;
-    } 
-    .checkout-btn{
-        width: 500px;
-        margin-left: 10px;
-        
-    }
+    
     .delivery-add-cart {
         width: calc(100% - 40px);
         margin-left: 20px;
@@ -2002,7 +2088,7 @@ margin-top: 0;
         margin-left: 0;
    }
    .discount-section input{
-        width: 350px;
+        width: 70%;
    }
    
    .discount-section button{
