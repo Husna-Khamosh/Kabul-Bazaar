@@ -1,178 +1,286 @@
-<html>
-    <head>
-        <title>Kabul Bazaar | Store-Wishlist</title>
-        <link rel="stylesheet" href="css/store.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <div class="body-page">
-            <div class="store-header">
-                 <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="Huberger-menu">
-            ☰
-        </label>
-                <div class="left-side-header"> 
-                    <div class="left-side-header-top">
-                        <img src="../images/woman.png" alt="HK">
-                        <span>Husna</span>
-                        <input type="search" placeholder=" 🔍  Filter the Products You are looking for">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kabul Bazaar | Your Cart</title>
+
+    <link rel="stylesheet" href="css/store.css">
+</head>
+
+<body>
+
+    <div class="body-page">
+
+        <!-- Header -->
+        <div class="store-header">
+
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="Huberger-menu">
+                ☰
+            </label>
+
+            <div class="left-side-header">
+
+                <div class="left-side-header-top">
+
+                    <img src="../images/woman.png" alt="HK">
+
+                    <span>Husna</span>
+
+                    <input
+                        type="search"
+                        placeholder=" 🔍  Filter the Products You are looking for"
+                    >
+
+                </div>
+
+                <div class="left-side-header-bottom">
+
+                    <ul>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Camera</a></li>
+                        <li><a href="#">Wearables</a></li>
+                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#">SmartHome</a></li>
+                        <li><a href="#">Accessoriees</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <nav class="right-side-header">
+
+                <ul>
+
+                    <li>
+                        <a href="wishlist.html">WishList</a>
+                    </li>
+
+                    <li>
+                        <a href="order.html">Orders</a>
+                    </li>
+
+                    <li class="cartheader">
+
+                        <a href="yourCart.html">
+                            🛒 Cart
+                        </a>
+
+                        <span class="cart-amount">
+                            3
+                        </span>
+
+                    </li>
+
+                    <li class="OR">
+                        OR
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Cart -->
+        <div class="yourCart-container">
+
+            <!-- Left Side -->
+            <div class="yourCart-left">
+
+                <h3>
+                    Your Cart. 3 items from 2 shops
+                </h3>
+
+                <p class="yourCart-top-p">
+                    Each shop ships and is tracked separately.
+                    One payment now, one sub order per shop.
+                </p>
+
+
+                <!-- Cart Items -->
+                <div class="kabul-items">
+
+                    <!-- Shop Header -->
+                    <div class="yourCart-header">
+
+                        <div class="your-cart-header-left">
+
+                            <span class="yourCart-avatar">
+                                TN
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    TechNest Electronics
+                                </h3>
+
+                                <p>
+                                    Ships in 2 days · Kabul
+                                </p>
+
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+                    
+
+
+                    <!-- Shop Total -->
+                    <div class="total-amount">
+                        AFN 87,750
                     </div>
 
-                    <div class="left-side-header-bottom">
+                </div>
+                
+                <template id="cart-product-template">
+                    <div class="cart-product">
+                         <div class="product-small-image">
+                            <img src="" alt="">
+                         </div>
+
+                        <div class="cart-product-info">
+                             <h4></h4>
+                             <p></p>
+                             <button type="button" class="remove-cart-product">Remove</button>
+                             <span>Save for later</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button type="button">−</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                        </div>
+                        <strong></strong>
+                    </div>
+                    </template>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="yourCart-right">
+
+                <h3>
+                    Order Summary
+                </h3>
+
+
+                <!-- Discount -->
+                <div class="discount-section">
+
+                    <input
+                        type="text"
+                        placeholder="Discount Code"
+                    >
+
+                    <button>
+                        Apply
+                    </button>
+
+                </div>
+
+
+                <!-- Items List -->
+                <div class="items-list">
+
+                    <div class="items-list-left">
+
                         <ul>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Audio</a></li>
-                            <li><a href="#">Camera</a></li>
-                            <li><a href="#">Wearables</a></li>
-                            <li><a href="#">Gaming</a></li>
-                            <li><a href="#">SmartHome</a></li>
-                            <li><a href="#">Accessoriees</a></li>
+
+                            <li>
+                                Items (3)
+                            </li>
+
+                            <li>
+                                Shop discounts
+                            </li>
+
+                            <li>
+                                Delivery (2 Shops)
+                            </li>
+
+                            <li>
+                                Platform Fee
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="items-list-right">
+
+                        <ul>
+
+                            <li>
+                                AFN 97,650
+                            </li>
+
+                            <li>
+                                -AFN 6,485
+                            </li>
+
+                            <li>
+                                AFN 400
+                            </li>
+
+                            <li>
+                                AFN 0
+                            </li>
+
                         </ul>
 
                     </div>
 
                 </div>
 
-                <nav class="right-side-header">
-                <ul>
-                    <li><a href="wishlist.html">WishList</a></li>
-                    <li><a href="order.html">Orders</a></li>
-                    <li class="cartheader">
-                        <a href="yourCart.html">🛒 Cart</a>
-                        <span class="cart-amount">3</span>
-                    </li>
-                    <li class="OR">OR</li>
-                </ul>
-            </nav>
-            </div>
 
-            <div class="yourCart-container">
-                <div class="yourCart-left">
-                    <h3>Your Cart. 3items from 2 shops</h3>
-                    <p class="yourCart-top-p">Each shoos ships and is tracked separately. one payment now , one sub order per shops.</p>
-                    <div class="kabul-items">
+                <!-- Total -->
+                <div class="total-price">
 
-    <!-- Shop Header -->
-    <div class="yourCart-header">
+                    <h2>
+                        Total
+                    </h2>
 
-        <div class="your-cart-header-left">
+                    <h3>
+                        AFN 91,545
+                    </h3>
 
-            <span class="yourCart-avatar">TN</span>
-
-            <div>
-                <h3>TechNest Electronics</h3>
-                <p>Ships in 2 days · Kabul</p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="total-amount">
-        AFN 87,750
-    </div>
-
-
-    <!-- Product 1 -->
-    <div class="cart-product">
-
-        <div class="product-small-image"></div>
-
-        <div class="cart-product-info">
-            <h4>Aurora 14" ultrabook, 16GB RAM</h4>
-            <p>Space gray / 512GB</p>
-            <span>Remove · Save for later</span>
-        </div>
-
-        <div class="quantity">
-            <button>−</button>
-            <span>1</span>
-            <button>+</button>
-        </div>
-
-        <strong>AFN 84,500</strong>
-
-    </div>
-
-
-    <!-- Product 2 -->
-    <div class="cart-product">
-
-        <div class="product-small-image"></div>
-
-        <div class="cart-product-info">
-            <h4>Pixel Watch S2 smartwatch</h4>
-            <p>Black / 42mm</p>
-            <span>Remove · Save for later</span>
-        </div>
-
-        <div class="quantity">
-            <button>−</button>
-            <span>1</span>
-            <button>+</button>
-        </div>
-
-        <strong>AFN 9,900</strong>
-
-    </div>
-
-</div>
-
-                    <div class="kabul-items">
-                        <div class="yourCart-header">
-                            <!--left side -->
-                            <div class="your-cart-header-left">
-                                <span class="yourCart-avatar">TN</span>
-                                <h3>TechNest-Electronics</h3>
-                                <p>Ships in 2 days Kabul</p>
-                            </div>
-                        </div>
-                        <!--right side amount-->
-                            <div class="total-amount">
-                                 <span>AFN 87.750</span>
-                            </div>
-                    </div>
                 </div>
 
-                <div class="yourCart-right">
-                    <h3>Order Summery</h3>
-                    <div class="discount-section">
-                        <input type="text" placeholder="Discount Code">
-                        <button>Apply</button>
-                    </div>
 
-                    <div class="items-list">
-                        <div class="items-list-left">
-                            <ul>
-                                <li>Items(3)</li>
-                                <li>Shop discounts </li>
-                                <li>Delivery (2 Shops)</li>
-                                <li>Platform Fee</li>
-                            </ul>
-                        </div>
-                        <div class="items-list-right">
-                            <ul>
-                                <li>AFN 97.650</li>
-                                <li>-AFN 6.485</li>
-                                <li>AFN 400</li>
-                                <li>AFN 0</li>
-                            </ul>
-                        </div>
-                    </div>
+                <!-- Checkout -->
+                <button class="checkout-btn">
+                    CheckOut
+                </button>
 
-                    <div class="total-price">
-                        <h2>Total</h2>
-                        <h3>AFN 91,545</h3>
-                    </div>
-                    <button class="checkout-btn">CheckOut</button>
-                    <p>Cash on delivery Available in Kabul Herat and Mazar</p>
-                </div>
+
+                <p>
+                    Cash on delivery Available in Kabul,
+                    Herat and Mazar
+                </p>
+
             </div>
 
-                
+        </div>
 
-    </body>
+    </div>
+
+
+  <script src="js/store.js"></script>
+
+</body>
 
 </html>
