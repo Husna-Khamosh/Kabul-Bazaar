@@ -114,5 +114,13 @@
     </div>
 
 </div>
+
+<script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const count = cart.reduce((s, p) => s + (p.quantity || 1), 0);
+document.querySelectorAll(".cart-amount")
+.forEach((el) => el.textContent = count);
+
+</script>
     </body>
 </html>
