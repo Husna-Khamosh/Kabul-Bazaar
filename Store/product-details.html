@@ -66,11 +66,11 @@
 
                      
                     <div class="product-details-right">
-                            <h2>Nova Buds Pro Wireless earbuds with active noise  cancelling</h2>
+                            <h2 class="product-name">Nova Buds Pro Wireless earbuds with active noise  cancelling</h2>
                             <div class="rate-sold">
                                 <span>⭐ 4.5 1.240 reviews. 3180 sold</span>
                             </div>
-                            <h3>AFN 3,250</h3>
+                            <h3 class="product-price">AFN 3,250</h3>
 
                             <div class="product-color">
                                 <h4>Color</h4>
@@ -97,7 +97,7 @@
                                     <span>1</span>
                                     <button>+</button>
                                 </div>
-                                <button class="add-to-cart-btn">Add to cart</button>
+                                <button class="add-to-cart-btn add-to-cart">Add to cart</button>
                                 <button class="product-wishlist-btn">♡</button>
                             </div>
                             <div class="delivery-info">
@@ -108,13 +108,7 @@
                 </div>
                 
 
-                <script>
-                    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-                    const count = cart.reduce((s, p) => s + (p.quantity || 1), 0);
-                    document.querySelectorAll(".cart-amount")
-                    .forEach((el) => el.textContent = count);
-
-                </script>
+                <script src="./js/store.js"></script>
 
     </body>
 

@@ -25,71 +25,69 @@ cart = uniqueCart;
 
 localStorage.setItem("cart", JSON.stringify(cart));
 
+document.addEventListener("click", function(event) {
 
-const addButtons = document.querySelectorAll(".add-to-cart");
+    const button = event.target.closest(".add-to-cart");
 
-addButtons.forEach(function(button) {
+    if (!button) {
+        return;
+    }
 
-    button.addEventListener("click", function() {
+    const product = button.closest(
+        ".popluar-week-cart, .popular-week-cart, .product-cart, .product-details-container"
+    );
 
-        const product = button.closest(
-            ".popluar-week-cart, .popular-week-cart"
-        );
+    if (!product) {
+        alert("Product card not found!");
+        return;
+    }
 
-        if (!product) {
-            alert("Product card not found!");
-            return;
-        }
+    const productNameElement = product.querySelector(".product-name");
+    const productPriceElement = product.querySelector(".product-price");
+    const productImageElement = product.querySelector("img");
 
-        const productNameElement = product.querySelector(".product-name");
-        const productPriceElement = product.querySelector(".product-price");
-        const productImageElement = product.querySelector("img");
+    if (!productNameElement || !productPriceElement || !productImageElement) {
+        alert("Product information not found!");
+        return;
+    }
 
-        if (!productNameElement || !productPriceElement || !productImageElement) {
-            alert("Product information not found!");
-            return;
-        }
+    const productName = productNameElement.textContent.trim();
 
-        const productName = productNameElement.textContent.trim();
+    const productPrice = Number(
+        productPriceElement.textContent.replace(/[^\d.]/g, "")
+    );
 
-        const productPrice = Number(
-            productPriceElement.textContent.replace(/[^\d.]/g, "")
-        );
+    const productImage = productImageElement.src;
 
-        const productImage = productImageElement.src;
-
-        const existingProduct = cart.find(function(item) {
-            return item.name === productName;
-        });
-
-        if (existingProduct) {
-
-            existingProduct.quantity = (Number(existingProduct.quantity) || 1) + 1;
-
-            alert(productName + " quantity increased in cart!");
-
-        } else {
-
-            cart.push({
-                name: productName,
-                price: productPrice,
-                image: productImage,
-                description: "",
-                quantity: 1
-            });
-
-            alert(productName + " added to cart!");
-
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        showCart();
-
+    const existingProduct = cart.find(function(item) {
+        return item.name === productName;
     });
 
-});
+    if (existingProduct) {
 
+        existingProduct.quantity = (Number(existingProduct.quantity) || 1) + 1;
+
+        alert(productName + " quantity increased in cart!");
+
+    } else {
+
+        cart.push({
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            description: "",
+            quantity: 1
+        });
+
+        alert(productName + " added to cart!");
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showCart();
+
+});
 
 function showCart() {
 
@@ -238,3 +236,66 @@ if (totalEl) totalEl.textContent = money(total);
 
 
 showCart();
+
+
+// product json file codes
+const productContainer = document.querySelector(".product-carts");
+
+
+if (productContainer) {
+
+    fetch("products.json")
+        .then(response => response.json())
+        .then(products => {
+
+            products.forEach(product => {
+
+                // کد فعلی ساخت کارت محصولاتت همین‌جا باقی بماند
+
+            });
+
+        })
+        .catch(error => console.error("Error loading products:", error));
+
+}
+fetch("products.json")
+
+.then(response => response.json())
+.then(products =>{
+    products.forEach(product => {
+    console.log(product.name);
+
+    productContainer.innerHTML += `
+        <div class="product-cart">
+
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+                <button class="wishlist-btn">♡</button>
+            </div>
+
+            <h5>${product.shop}</h5>
+
+            <h4 class="product-name">${product.name}</h4>
+
+            <div class="rating">
+                ⭐ ${product.rating}
+            </div>
+
+            <div class="product-price">
+                <strong>AFN ${product.price}</strong>
+            </div>
+
+            <button class="add-to-cart">+</button>
+
+        </div>
+    `;
+
+   
+});
+
+    
+})
+
+
+//product details ... showing details of products
+

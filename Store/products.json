@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Nova Buds Pro ",
+    "shop": "SoundHub",
+    "price": 3250,
+    "rating": 4.5,
+    "category": "Audio",
+    "image": "../images/phone.jpg"
+  },
+  {
+    "id": 2,
+    "name": "PC External Keyboard",
+    "shop": "TechNest Electronics",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/keyboard.jpg"
+  },
+  {
+    "id": 3,
+    "name": "PC External Mouse",
+    "shop": "TechNest Electronics",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/mouse.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dell Laptop",
+    "shop": "TechNest Electronics",
+    "price": 3250,
+    "rating": 4.5,
+    "category": "Laptops",
+    "image": "../images/dell.jpg"
+  },
+  {
+    "id": 5,
+    "name": "AirPods Pro",
+    "shop": "SoundHub",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Audio",
+    "image": "../images/airpod.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Power Bank",
+    "shop": "TechNest Electronics",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/powerback.jpg"
+  },
+  {
+    "id": 7,
+    "name": "PC Battery Charger",
+    "shop": "TechNest Electronics",
+    "price": 3250,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/charger.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Power Cable",
+    "shop": "TechNest Electronics",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/cable.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Power Bank",
+    "shop": "TechNest Electronics",
+    "price": 1000,
+    "rating": 4.5,
+    "category": "Accessories",
+    "image": "../images/powerback.jpg"
+  }
+]
