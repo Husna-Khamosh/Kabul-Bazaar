@@ -243,6 +243,14 @@ const productContainer = document.querySelector(".product-carts");
 
 if (productContainer) {
 
+    // this section is belong to category menu 
+    const params = new URLSearchParams(window.location.search);
+    const selectedCategory = params.get("category");
+    console.log(selectedCategory);
+
+    
+
+    //this section is belong to getting data from json file
     fetch("products.json")
         .then(function(response) {
             return response.json();

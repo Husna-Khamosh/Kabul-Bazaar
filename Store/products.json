@@ -23,7 +23,7 @@
     "shop": "TechNest Electronics",
     "price": 1000,
     "rating": 4.5,
-    "category": "Accessories",
+    "category": "Phones",
     "image": "../images/mouse.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "shop": "SoundHub",
     "price": 1000,
     "rating": 4.5,
-    "category": "Audio",
+    "category": "Camera",
     "image": "../images/airpod.jpg"
   },
   {
@@ -50,7 +50,7 @@
     "shop": "TechNest Electronics",
     "price": 1000,
     "rating": 4.5,
-    "category": "Accessories",
+    "category": "Wearables",
     "image": "../images/powerback.jpg"
   },
   {
@@ -59,7 +59,7 @@
     "shop": "TechNest Electronics",
     "price": 3250,
     "rating": 4.5,
-    "category": "Accessories",
+    "category": "Gaming",
     "image": "../images/charger.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "shop": "TechNest Electronics",
     "price": 1000,
     "rating": 4.5,
-    "category": "Accessories",
+    "category": "SmartHome",
     "image": "../images/cable.jpg"
   },
   {
