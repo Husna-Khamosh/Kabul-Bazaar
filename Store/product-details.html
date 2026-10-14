@@ -108,7 +108,40 @@
                 </div>
                 
 
-                <script src="./js/store.js"></script>
+                <script src="./js/store.js">
+                    const selectedProduct = JSON.parse(
+                        localStorage.getItem("selectedProduct")
+                    );
+                    console.log(selectedProduct);
+
+                </script>
+
+                <script>
+                    const selectedDetailsProduct = JSON.parse(
+                        localStorage.getItem("selectedProduct")
+                    );
+
+                    if (selectedDetailsProduct) {
+
+                        const detailsName = document.querySelector(".product-name");
+                        const detailsPrice = document.querySelector(".product-price");
+                        const detailsImage = document.querySelector(".main-product-image");
+
+                        if (detailsName) {
+                            detailsName.textContent = selectedDetailsProduct.name;
+                        }
+
+                        if (detailsPrice) {
+                            detailsPrice.textContent = selectedDetailsProduct.price;
+                        }
+
+                        if (detailsImage) {
+                            detailsImage.src = selectedDetailsProduct.image;
+                            detailsImage.alt = selectedDetailsProduct.name;
+                        }
+
+                    }
+                </script>
 
     </body>
 

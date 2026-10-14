@@ -241,61 +241,136 @@ showCart();
 // product json file codes
 const productContainer = document.querySelector(".product-carts");
 
-
 if (productContainer) {
 
     fetch("products.json")
-        .then(response => response.json())
-        .then(products => {
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(products) {
 
-            products.forEach(product => {
+            products.forEach(function(product) {
 
-                // کد فعلی ساخت کارت محصولاتت همین‌جا باقی بماند
+                productContainer.innerHTML += `
+                    <div class="product-cart">
+
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                            <button type="button" class="wishlist-btn">♡</button>
+                        </div>
+
+                        <h5>${product.shop}</h5>
+
+                        <h4 class="product-name">${product.name}</h4>
+
+                        <div class="rating">
+                            ⭐ ${product.rating}
+                        </div>
+
+                        <div class="price-row">
+                            <strong class="product-price">AFN ${product.price}</strong>
+                        </div>
+
+                        <button type="button" class="add-to-cart">+</button>
+
+                    </div>
+                `;
 
             });
 
         })
-        .catch(error => console.error("Error loading products:", error));
+        .catch(function(error) {
+            console.error("Error loading products:", error);
+        });
 
 }
-fetch("products.json")
-
-.then(response => response.json())
-.then(products =>{
-    products.forEach(product => {
-    console.log(product.name);
-
-    productContainer.innerHTML += `
-        <div class="product-cart">
-
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-                <button class="wishlist-btn">♡</button>
-            </div>
-
-            <h5>${product.shop}</h5>
-
-            <h4 class="product-name">${product.name}</h4>
-
-            <div class="rating">
-                ⭐ ${product.rating}
-            </div>
-
-            <div class="product-price">
-                <strong>AFN ${product.price}</strong>
-            </div>
-
-            <button class="add-to-cart">+</button>
-
-        </div>
-    `;
-
-   
-});
-
-    
-})
 
 
 //product details ... showing details of products
 
+const productList = document.querySelector(".product-carts");
+
+if (productList) {
+
+    productList.addEventListener("click", function(event) {
+
+        if (event.target.closest(".add-to-cart, .wishlist-btn")) {
+            return;
+        }
+
+        const productCard = event.target.closest(".product-cart");
+
+        if (!productCard) {
+            return;
+        }
+
+        const nameElement = productCard.querySelector(".product-name");
+        const priceElement = productCard.querySelector(".product-price");
+        const imageElement = productCard.querySelector("img");
+
+        if (!nameElement || !priceElement || !imageElement) {
+            return;
+        }
+
+        const selectedProduct = {
+            name: nameElement.textContent.trim(),
+            price: priceElement.textContent.trim(),
+            image: imageElement.src
+        };
+
+        localStorage.setItem(
+            "selectedProduct",
+            JSON.stringify(selectedProduct)
+        );
+
+        window.location.href = "product-Details.html";
+
+    });
+
+}
+
+
+//details product showing of popular this week (store.html)
+const popularProducts = document.querySelector(".Popular-week");
+
+if (popularProducts) {
+
+    popularProducts.addEventListener("click", function(event) {
+
+        if (event.target.closest(".add-to-cart, .wishlist-btn")) {
+            return;
+        }
+
+        const productCard = event.target.closest(
+            ".popluar-week-cart, .popular-week-cart"
+        );
+
+        if (!productCard) {
+            return;
+        }
+
+        const nameElement = productCard.querySelector(".product-name");
+        const priceElement = productCard.querySelector(".product-price");
+        const imageElement = productCard.querySelector("img");
+
+        if (!nameElement || !priceElement || !imageElement) {
+            alert("Product information not found!");
+            return;
+        }
+
+        const selectedProduct = {
+            name: nameElement.textContent.trim(),
+            price: priceElement.textContent.trim(),
+            image: imageElement.src
+        };
+
+        localStorage.setItem(
+            "selectedProduct",
+            JSON.stringify(selectedProduct)
+        );
+
+        window.location.href = "product-details.html";
+
+    });
+
+}
