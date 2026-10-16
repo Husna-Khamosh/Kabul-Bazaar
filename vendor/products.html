@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kabul Bazaar - Vendor-Portal-Dashboard</title>
+    <title>Kabul Bazaar - Vendor-Portal-Products</title>
 
     <link rel="stylesheet" href="css/vendor.css">
 </head>
@@ -14,10 +15,9 @@
 
     <div class="vendor-container">
 
-        <!-- ================= SIDEBAR ================= -->
+        <!-- SIDEBAR -->
         <aside class="vendor-sidebar">
 
-            <!-- Sidebar Header -->
             <div class="sidebar-header">
 
                 <div class="logo">
@@ -31,56 +31,24 @@
 
             </div>
 
-
             <!-- Sidebar Menu -->
             <nav class="sidebar-menu">
-
                 <ul>
-
-                    <li>
-                        <a href="index.html">Dashboard</a>
-                    </li>
-
-                    <li>
-                        <a href="products.html">Products</a>
-                    </li>
-                    <li>
-                        <a href="add-products.html">Add-Products</a>
-                    </li>
-
-                    <li>
-                        <a href="sub-orders.html">Sub-Orders</a>
-                    </li>
-
-                    <li>
-                        <a href="discounts.html">Discounts</a>
-                    </li>
-
-                    <li>
-                        <a href="Payouts.html">Payouts</a>
-                    </li>
-                    <li>
-                        <a href="reviews.html">Reviews</a>
-                    </li>
-
-                    <li>
-                        <a href="shop-profile.html">Shop Profile</a>
-                    </li>
-
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="add-products.html">Add-Products</a></li>
+                    <li><a href="sub-orders.html">Sub-Orders</a></li>
+                    <li><a href="discounts.html">Discounts</a></li>
+                    <li><a href="Payouts.html">Payouts</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="shop-profile.html">Shop Profile</a></li>
                 </ul>
-
             </nav>
-            <div class="main-contentt">
-
-        <button class="menu-button" id="menuButton">
-            ☰
-        </button>
 
             <!-- Admin Profile -->
             <div class="vendor-profile">
 
-                <div class="profile-image">
-                </div>
+                <div class="profile-image"></div>
 
                 <div class="vendor-info">
                     <h4>Husna Khamosh</h4>
@@ -91,107 +59,138 @@
 
         </aside>
 
-
-        <!-- ================= MAIN CONTENT ================= -->
-
+        <!-- MAIN CONTENT -->
         <div class="main-content">
 
             <!-- Dashboard Header -->
             <div class="Dashboard-header">
+
                 <div class="title">
                     <h2>Platform Overview</h2>
                     <p>All Shapes - September 2026</p>
                 </div>
+
                 <div class="header-action">
-                    <input
-                        type="text"
-                        placeholder="Search">
-                    <button>
+                    <input type="text" placeholder="Search">
+
+                    <button type="button"
+                        onclick="window.location.href='add-products.html'">
                         Add Products
                     </button>
                 </div>
+
             </div>
 
-            <!--main Body-->
-
+            <!-- Product Filters -->
             <div class="header-btn">
-                <button>All 128</button>
-                <button>Live 122</button>
-                <button>Draft 4</button>
-                <button>Out of Stock 6</button>
+                <button type="button">All 128</button>
+                <button type="button">Live 122</button>
+                <button type="button">Draft 4</button>
+                <button type="button">Out of Stock 6</button>
             </div>
 
+            <!-- Products Table -->
             <div class="products-list">
+
                 <table>
-                    <tr>
-                        <th>PRODUCT</th>
-                        <th>PRICE</th>
-                        <th>VARIANTS</th>
-                        <th>STOCK</th>
-                        <th>STATUS</th>
-                        <th>SALES</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="product-img">
-                                <img src="../images/pc.jpg" alt="">
-                            </span>
-                            <h4>NOVA Buds Pro Wireless Earbuds</h4>
-                            
-                        </td>
-                        <td>AFN 3.250</td>
-                        <td>3 Colors - 3 Sizes</td>
-                        <td>142</td>
-                        <td>Live</td>
-                        <td>3.180</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="product-img">
-                                <img src="../images/phone.jpg" alt="">
-                            </span>
-                            <h4>NOVA Buds Pro Wireless Earbuds</h4>
-                            
-                        </td>
-                        <td>AFN 3.250</td>
-                        <td>3 Colors - 3 Sizes</td>
-                        <td>142</td>
-                        <td>Live</td>
-                        <td>3.180</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="product-img">
-                                <img src="../images/pc.jpg" alt="">
-                            </span>
-                            <h4>NOVA Buds Pro Wireless Earbuds</h4>
-                            
-                        </td>
-                        <td>AFN 3.250</td>
-                        <td>3 Colors - 3 Sizes</td>
-                        <td>142</td>
-                        <td>Live</td>
-                        <td>3.180</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="product-img">
-                                <img src="../images/phone.jpg" alt="">
-                            </span>
-                            <h4>NOVA Buds Pro Wireless Earbuds</h4>
-                            
-                        </td>
-                        <td>AFN 3.250</td>
-                        <td>3 Colors - 3 Sizes</td>
-                        <td>142</td>
-                        <td>Live</td>
-                        <td>3.180</td>
-                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>PRICE</th>
+                            <th>VARIANTS</th>
+                            <th>STOCK</th>
+                            <th>STATUS</th>
+                            <th>SALES</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Existing sample products stay here -->
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <div class="product-info">
+                                    <span class="product-img">
+                                        <img src="../images/pc.jpg"
+                                            alt="NOVA Buds Pro">
+                                    </span>
+                                    <h4>NOVA Buds Pro Wireless Earbuds</h4>
+                                </div>
+                            </td>
+                            <td>AFN 3,250</td>
+                            <td>3 Colors - 3 Sizes</td>
+                            <td>142</td>
+                            <td><span class="status live">Live</span></td>
+                            <td>3,180</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="product-info">
+                                    <span class="product-img">
+                                        <img src="../images/phone.jpg"
+                                            alt="NOVA Buds Pro">
+                                    </span>
+                                    <h4>NOVA Buds Pro Wireless Earbuds</h4>
+                                </div>
+                            </td>
+                            <td>AFN 3,250</td>
+                            <td>3 Colors - 3 Sizes</td>
+                            <td>142</td>
+                            <td><span class="status live">Live</span></td>
+                            <td>3,180</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="product-info">
+                                    <span class="product-img">
+                                        <img src="../images/pc.jpg"
+                                            alt="NOVA Buds Pro">
+                                    </span>
+                                    <h4>NOVA Buds Pro Wireless Earbuds</h4>
+                                </div>
+                            </td>
+                            <td>AFN 3,250</td>
+                            <td>3 Colors - 3 Sizes</td>
+                            <td>142</td>
+                            <td><span class="status live">Live</span></td>
+                            <td>3,180</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="product-info">
+                                    <span class="product-img">
+                                        <img src="../images/phone.jpg"
+                                            alt="NOVA Buds Pro">
+                                    </span>
+                                    <h4>NOVA Buds Pro Wireless Earbuds</h4>
+                                </div>
+                            </td>
+                            <td>AFN 3,250</td>
+                            <td>3 Colors - 3 Sizes</td>
+                            <td>142</td>
+                            <td><span class="status live">Live</span></td>
+                            <td>3,180</td>
+                        </tr>
+
+                    </tbody>
+
+                    <!-- JavaScript adds newly saved products here -->
+                    <tbody id="productsTableBody"></tbody>
+
                 </table>
+
             </div>
+
         </div>
 
     </div>
+
+    <!-- JavaScript -->
+    <script src="js/vendor.js"></script>
 
 </body>
 

@@ -248,49 +248,55 @@ if (productContainer) {
     const selectedCategory = params.get("category");
     console.log(selectedCategory);
 
-    
-
     //this section is belong to getting data from json file
-    fetch("products.json")
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(products) {
+    
+fetch("products.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(products) {
 
-            products.forEach(function(product) {
+        productContainer.innerHTML = "";
 
-                productContainer.innerHTML += `
-                    <div class="product-cart">
-
-                        <div class="product-image">
-                            <img src="${product.image}" alt="${product.name}">
-                            <button type="button" class="wishlist-btn">♡</button>
-                        </div>
-
-                        <h5>${product.shop}</h5>
-
-                        <h4 class="product-name">${product.name}</h4>
-
-                        <div class="rating">
-                            ⭐ ${product.rating}
-                        </div>
-
-                        <div class="price-row">
-                            <strong class="product-price">AFN ${product.price}</strong>
-                        </div>
-
-                        <button type="button" class="add-to-cart">+</button>
-
-                    </div>
-                `;
-
-            });
-
-        })
-        .catch(function(error) {
-            console.error("Error loading products:", error);
+        const filteredProducts = products.filter(function(product) {
+            return selectedCategory === product.category;
         });
 
+        filteredProducts.forEach(function(product) {
+
+            productContainer.innerHTML += `
+                <div class="product-cart">
+
+                    <div class="product-image">
+                        <img src="${product.images[0]}" alt="${product.name}">
+                        <button type="button" class="wishlist-btn">♡</button>
+                    </div>
+
+                    <h5>${product.shop}</h5>
+
+                    <h4 class="product-name">${product.name}</h4>
+
+                    <div class="rating">
+                        ⭐ ${product.rating}
+                    </div>
+
+                    <div class="price-row">
+                        <strong class="product-price">
+                            AFN ${product.price}
+                        </strong>
+                    </div>
+
+                    <button type="button" class="add-to-cart">+</button>
+
+                </div>
+            `;
+
+        });
+
+    })
+    .catch(function(error) {
+        console.error("Error loading products:", error);
+    });
 }
 
 
@@ -321,9 +327,9 @@ if (productList) {
         }
 
         const selectedProduct = {
-            name: nameElement.textContent.trim(),
-            price: priceElement.textContent.trim(),
-            image: imageElement.src
+        name: nameElement.textContent.trim(),
+        price: priceElement.textContent.trim(),
+        image: imageElement.getAttribute("src")
         };
 
         localStorage.setItem(

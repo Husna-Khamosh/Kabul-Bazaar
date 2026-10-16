@@ -6,7 +6,13 @@
     "price": 3250,
     "rating": 4.5,
     "category": "Audio",
-    "image": "../images/phone.jpg"
+    "images": [
+    "../images/keyboard.jpg",
+    "../images/iphone2.jpg",
+    "../images/mouse.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 2,
@@ -15,7 +21,13 @@
     "price": 1000,
     "rating": 4.5,
     "category": "Accessories",
-    "image": "../images/keyboard.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 3,
@@ -24,7 +36,13 @@
     "price": 1000,
     "rating": 4.5,
     "category": "Phones",
-    "image": "../images/mouse.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 4,
@@ -33,7 +51,13 @@
     "price": 3250,
     "rating": 4.5,
     "category": "Laptops",
-    "image": "../images/dell.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 5,
@@ -42,7 +66,13 @@
     "price": 1000,
     "rating": 4.5,
     "category": "Camera",
-    "image": "../images/airpod.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 6,
@@ -51,7 +81,13 @@
     "price": 1000,
     "rating": 4.5,
     "category": "Wearables",
-    "image": "../images/powerback.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 7,
@@ -60,7 +96,13 @@
     "price": 3250,
     "rating": 4.5,
     "category": "Gaming",
-    "image": "../images/charger.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 8,
@@ -69,7 +111,13 @@
     "price": 1000,
     "rating": 4.5,
     "category": "SmartHome",
-    "image": "../images/cable.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   },
   {
     "id": 9,
@@ -78,6 +126,12 @@
     "price": 1000,
     "rating": 4.5,
     "category": "Accessories",
-    "image": "../images/powerback.jpg"
+    "images": [
+    "../images/phone.jpg",
+    "../images/iphone.jpg",
+    "../images/iphone3.jpg",
+    "../images/iphone2.jpg",
+    "../images/iphone.jpg"
+  ]
   }
 ]

@@ -21,14 +21,14 @@
 
                     <div class="left-side-header-bottom">
                         <ul>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Audio</a></li>
-                            <li><a href="#">Camera</a></li>
-                            <li><a href="#">Wearables</a></li>
-                            <li><a href="#">Gaming</a></li>
-                            <li><a href="#">SmartHome</a></li>
-                            <li><a href="#">Accessoriees</a></li>
+                            <li><a href="product.html?category=Phones">Phones</a></li>
+                            <li><a href="product.html?category=Laptops">Laptops</a></li>
+                            <li><a href="product.html?category=Audio">Audio</a></li>
+                            <li><a href="product.html?category=Camera">Camera</a></li>
+                            <li><a href="product.html?category=Wearables">Wearables</a></li>
+                            <li><a href="product.html?category=Gaming">Gaming</a></li>
+                            <li><a href="product.html?category=SmartHome">SmartHome</a></li>
+                            <li><a href="product.html?category=Accessories">Accessories</a></li>
                         </ul>
 
                     </div>
@@ -53,18 +53,22 @@
                 
                 <h4 class="details-progress-title">Home/Audio/Earbuds</h4>
                 <div class="product-details-container">
-                    
                     <div class="product-details-left">
-                        <img src="../images/phone.jpg" alt="" class="main-product-image">
-                        <div class="product-photots">
+
+                        <img
+                            src="../images/phone.jpg"
+                            alt=""
+                            class="main-product-image"
+                        >
+                        <div class="product-photos">
                             <img src="../images/iphone.jpg" alt="">
-                            <img src="../images/iphone3 .jpg" alt="">
+                            <img src="../images/iphone3.jpg" alt="">
                             <img src="../images/iphone2.jpg" alt="">
                             <img src="../images/iphone.jpg" alt="">
-                        </div>  
                         </div>
 
-                     
+                    </div>
+
                     <div class="product-details-right">
                             <h2 class="product-name">Nova Buds Pro Wireless earbuds with active noise  cancelling</h2>
                             <div class="rate-sold">
@@ -109,39 +113,59 @@
                 
 
                 <script src="./js/store.js">
-                    const selectedProduct = JSON.parse(
-                        localStorage.getItem("selectedProduct")
-                    );
-                    console.log(selectedProduct);
-
                 </script>
 
+                
+                    
                 <script>
-                    const selectedDetailsProduct = JSON.parse(
-                        localStorage.getItem("selectedProduct")
-                    );
+                                    
+                    async function showProductDetails() {
 
-                    if (selectedDetailsProduct) {
+                        let selectedProduct = JSON.parse(
+                            localStorage.getItem("selectedProduct")
+                        );
+
+                        if (!selectedProduct) {
+                            const response = await fetch("products.json");
+                            const products = await response.json();
+
+                            selectedProduct = products[0];
+                        }
 
                         const detailsName = document.querySelector(".product-name");
                         const detailsPrice = document.querySelector(".product-price");
                         const detailsImage = document.querySelector(".main-product-image");
+                        const smallPhotos = document.querySelectorAll(".product-photos img");
 
-                        if (detailsName) {
-                            detailsName.textContent = selectedDetailsProduct.name;
-                        }
+                        detailsName.textContent = selectedProduct.name;
 
-                        if (detailsPrice) {
-                            detailsPrice.textContent = selectedDetailsProduct.price;
-                        }
+                        detailsPrice.textContent =
+                            "AFN " + selectedProduct.price;
+                        const images = selectedProduct.images || [
+                            selectedProduct.image
+                        ];
 
-                        if (detailsImage) {
-                            detailsImage.src = selectedDetailsProduct.image;
-                            detailsImage.alt = selectedDetailsProduct.name;
-                        }
+                        detailsImage.src = images[0];
+                        detailsImage.alt = selectedProduct.name;
+                        smallPhotos.forEach((photo, index) => {
 
+                            photo.src = images[index + 1] || images[0];
+                            photo.alt = selectedProduct.name;
+
+                            photo.onclick = function() {
+                                detailsImage.src = photo.src;
+                            };
+
+                        });
                     }
+
+                    showProductDetails();
+
                 </script>
+
+                    
+
+               
 
     </body>
 
