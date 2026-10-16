@@ -22,7 +22,7 @@
     "rating": 4.5,
     "category": "Accessories",
     "images": [
-    "../images/phone.jpg",
+    "../images/keyboard.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -52,7 +52,7 @@
     "rating": 4.5,
     "category": "Laptops",
     "images": [
-    "../images/phone.jpg",
+    "../images/dell.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -67,7 +67,7 @@
     "rating": 4.5,
     "category": "Camera",
     "images": [
-    "../images/phone.jpg",
+    "../images/airpod.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -82,7 +82,7 @@
     "rating": 4.5,
     "category": "Wearables",
     "images": [
-    "../images/phone.jpg",
+    "../images/powerback.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -97,7 +97,7 @@
     "rating": 4.5,
     "category": "Gaming",
     "images": [
-    "../images/phone.jpg",
+    "../images/charger.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -112,7 +112,7 @@
     "rating": 4.5,
     "category": "SmartHome",
     "images": [
-    "../images/phone.jpg",
+    "../images/cable.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",
@@ -127,7 +127,7 @@
     "rating": 4.5,
     "category": "Accessories",
     "images": [
-    "../images/phone.jpg",
+    "../images/powerback.jpg",
     "../images/iphone.jpg",
     "../images/iphone3.jpg",
     "../images/iphone2.jpg",

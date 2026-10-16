@@ -61,121 +61,7 @@
 
                 <!--main Body-->
                 <div class="wishlist-carts">
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="cart">
-                    <span class="WishList-profile">A</span>
-                            <div class="cart-info">
-                                <h6>LensLab</h6>
-                                <p>ZenithX2 mircroless camera</p>
-                                <h5>AFN 132,000</h5>
-                                <div class="cart-actions">
-                                    <a href="#" Class="addcart">Add to cart</a>
-                                    <a href="#" class="removecart">Remove</a>
-                                </div>
-                            </div>
+                    
 
                     </div>
 
@@ -193,6 +79,122 @@
 const count = cart.reduce((s, p) => s + (p.quantity || 1), 0);
 document.querySelectorAll(".cart-amount")
 .forEach((el) => el.textContent = count);
+
+
+
+const wishlistContainer = document.querySelector(".wishlist-carts");
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+wishlistContainer.innerHTML = "";
+
+wishlist.forEach(function(product) {
+
+    const productCard = document.createElement("div");
+    productCard.classList.add("cart");
+
+    productCard.innerHTML = `
+        <span class="WishList-profile">
+            ${product.shop ? product.shop.charAt(0) : "S"}
+        </span>
+
+        <div class="cart-info">
+            <h6>${product.shop || "Unknown Shop"}</h6>
+
+            <p>${product.name}</p>
+
+            <h5>AFN ${Number(product.price).toLocaleString()}</h5>
+
+            <div class="cart-actions">
+                <a href="#" class="addcart">Add to cart</a>
+                <a href="#" class="removecart">Remove</a>
+            </div>
+        </div>
+    `;
+
+    wishlistContainer.appendChild(productCard);
+
+});
+
+
+wishlistContainer.addEventListener("click", function(event) {
+
+    const removeButton = event.target.closest(".removecart");
+
+    if (!removeButton) {
+        return;
+    }
+
+    event.preventDefault();
+
+    const productCard = removeButton.closest(".cart");
+
+    const productName = productCard.querySelector(".cart-info p").textContent;
+
+    wishlist = wishlist.filter(function(product) {
+        return product.name !== productName;
+    });
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    productCard.remove();
+
+});
+
+
+
+wishlistContainer.addEventListener("click", function(event) {
+
+    const addButton = event.target.closest(".addcart");
+
+    if (!addButton) {
+        return;
+    }
+
+    event.preventDefault();
+
+    const productCard = addButton.closest(".cart");
+
+    const productName = productCard.querySelector(".cart-info p").textContent;
+
+    const productPrice = Number(
+        productCard.querySelector(".cart-info h5").textContent.replace(/[^\d.]/g, "")
+    );
+
+    const productShop = productCard.querySelector(".cart-info h6").textContent;
+    const wishlistProduct = wishlist.find(function(product) {
+    return product.name === productName;
+});
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find(function(product) {
+        return product.name === productName;
+    });
+
+    if (existingProduct) {
+
+        existingProduct.quantity = (Number(existingProduct.quantity) || 1) + 1;
+
+    } else {
+        
+        cart.push({
+            name: productName,
+            price: productPrice,
+            shop: productShop,
+            image: wishlistProduct.image,
+            description: "",
+            quantity: 1
+        });
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(productName + " added to cart!");
+
+});
+
 
     </script>
 
