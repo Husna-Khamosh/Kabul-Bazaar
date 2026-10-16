@@ -1780,4 +1780,423 @@ body {
         height: 150px;
     }
 }
-```
+
+
+
+
+
+.vendor-page-content {
+    padding: 18px 15px 25px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+}
+
+
+
+
+.order-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 13px;
+    border: 1px solid #e0e5e9;
+    border-radius: 20px;
+    background-color: white;
+    color: #526779;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #123E5C;
+    color: #123E5C;
+}
+
+.filter-btn.active {
+    background-color: #123E5C;
+    color: white;
+    border-color: #123E5C;
+}
+
+.filter-btn span {
+    font-weight: bold;
+}
+
+
+
+
+.vendor-table-card {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #e1e6ea;
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.vendor-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    table-layout: auto;
+    background-color: white;
+}
+
+.vendor-table thead {
+    background-color: #fbfcfd;
+}
+
+.vendor-table th {
+    padding: 12px 11px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+    color: #526779;
+    border-bottom: 1px solid #e8edf1;
+    white-space: nowrap;
+}
+
+.vendor-table td {
+    padding: 13px 11px;
+    font-size: 11px;
+    color: #253849;
+    border-bottom: 1px solid #edf0f3;
+    white-space: nowrap;
+}
+
+.vendor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.vendor-table tbody tr:hover {
+    background-color: #fafcfd;
+}
+
+.vendor-table td strong {
+    font-weight: 600;
+    color: #123E5C;
+}
+
+
+/* Customer name and date */
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.customer-info strong {
+    font-size: 11px;
+    font-weight: 500;
+    color: #253849;
+}
+
+.customer-info span {
+    font-size: 9px;
+    color: #8999a8;
+}
+
+
+/* Commission */
+
+.vendor-table .commission-value {
+    color: #728395;
+}
+
+
+/* Order status labels */
+
+.order-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 9px;
+    line-height: 1;
+}
+
+.order-status.packed {
+    background-color: #eaf3f9;
+    color: #28648a;
+}
+
+.order-status.shipped {
+    background-color: #eaf3f9;
+    color: #28648a;
+}
+
+.order-status.delivered {
+    background-color: #e5f7ee;
+    color: #16834e;
+}
+
+.order-status.pending {
+    background-color: #fff0dc;
+    color: #b96c15;
+}
+
+.order-status.cancelled {
+    background-color: #fde9ec;
+    color: #c43b52;
+}
+
+
+/* Table action buttons */
+
+.table-action {
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    color: #0866ad;
+    font-size: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.table-action:hover {
+    color: #123E5C;
+    text-decoration: underline;
+}
+
+
+
+.payout-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.payout-card {
+    min-width: 0;
+    padding: 16px 13px;
+    background-color: white;
+    border: 1px solid #e1e6ea;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.payout-card p {
+    margin: 0 0 8px;
+    font-size: 11px;
+    color: #718398;
+}
+
+.payout-card h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #172f43;
+    overflow-wrap: anywhere;
+}
+
+.payout-card span {
+    font-size: 9px;
+    color: #8292a1;
+}
+
+.payout-card.available-card {
+    background-color: #edf5fa;
+    border-color: #3985b4;
+}
+
+.payout-card.available-card h2 {
+    color: #126395;
+}
+
+
+.payout-breakdown {
+    padding: 15px 13px 12px;
+    margin-bottom: 12px;
+    background-color: white;
+    border: 1px solid #e1e6ea;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.payout-breakdown h3,
+.payout-history h3 {
+    margin: 0;
+    padding: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #172f43;
+}
+
+.breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    min-height: 36px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 10px;
+}
+
+.breakdown-row span {
+    color: #74869a;
+}
+
+.breakdown-row strong {
+    color: #243849;
+    font-weight: 500;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.breakdown-row.commission-row span,
+.breakdown-row.commission-row strong {
+    color: #df4960;
+}
+
+.breakdown-row.net-row {
+    border-bottom: none;
+}
+
+.breakdown-row.net-row span,
+.breakdown-row.net-row strong {
+    color: #172f43;
+    font-weight: 600;
+}
+
+.payout-note {
+    margin: 5px 0 0;
+    font-size: 9px;
+    line-height: 1.6;
+    color: #8292a1;
+}
+
+
+.payout-history {
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #e1e6ea;
+    border-radius: 12px;
+}
+
+.payout-history h3 {
+    padding: 13px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.payout-history-row {
+    display: grid;
+    grid-template-columns: 75px minmax(100px, 1fr) minmax(100px, auto) 48px;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 13px;
+    border-bottom: 1px solid #edf0f3;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.payout-history-row:last-child {
+    border-bottom: none;
+}
+
+.payout-history-row > strong {
+    font-weight: 500;
+    color: #243849;
+}
+
+.payout-history-row .payout-period {
+    color: #8191a2;
+}
+
+.payout-history-row .payout-amount {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.payout-history-row .payout-paid {
+    justify-self: center;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background-color: #e5f7ee;
+    color: #16834e;
+    font-size: 9px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .payout-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .payout-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .vendor-page-content {
+        padding: 15px 10px 20px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .payout-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .payout-card:last-child {
+        grid-column: auto;
+    }
+
+    .payout-card h2 {
+        font-size: 18px;
+    }
+
+    .vendor-page-content {
+        padding: 12px 8px 20px;
+    }
+
+    .order-filters {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .payout-history-row {
+        grid-template-columns: 65px minmax(75px, 1fr) minmax(90px, auto);
+        gap: 7px;
+        padding: 10px;
+    }
+
+    .payout-history-row .payout-paid {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+    .breakdown-row {
+        gap: 8px;
+        font-size: 9px;
+    }
+
+    .breakdown-row strong {
+        white-space: normal;
+    }
+
+}
+

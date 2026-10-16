@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kabul Bazaar | Vendor-Sub-Orders</title>
+
+    <link rel="stylesheet" href="css/vendor.css">
+</head>
+
+<body>
+
+    <div class="vendor-container">
+
+        <!-- SIDEBAR -->
+        <aside class="vendor-sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo">KB</div>
+
+                <div class="site-name">
+                    <h2>KABUL BAZAAR</h2>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="add-products.html">Add Products</a></li>
+                    <li class="active"><a href="sub-orders.html">Sub-orders</a></li>
+                    <li><a href="discounts.html">Discounts</a></li>
+                    <li><a href="Payouts.html">Payouts</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="shop-profile.html">Shop Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="vendor-profile">
+                <div class="profile-image"></div>
+
+                <div class="vendor-info">
+                    <h4>Husna Khamosh</h4>
+                    <span>Vendor</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="Dashboard-header">
+
+                <div class="title">
+                    <h2>Sub-orders</h2>
+                    <p>Only orders that contain your products</p>
+                </div>
+
+                <div class="header-action">
+                    <input type="text" placeholder="Search orders">
+                    <button type="button">Export CSV</button>
+                </div>
+
+            </header>
+
+            <section class="vendor-page-content">
+
+                <!-- ORDER FILTERS -->
+                <div class="order-filters">
+                    <button class="filter-btn active" type="button">All</button>
+                    <button class="filter-btn" type="button">
+                        Pending <span>3</span>
+                    </button>
+                    <button class="filter-btn" type="button">
+                        Packed <span>5</span>
+                    </button>
+                    <button class="filter-btn" type="button">
+                        Shipped <span>4</span>
+                    </button>
+                    <button class="filter-btn" type="button">Delivered</button>
+                </div>
+
+                <!-- ORDERS TABLE -->
+                <div class="vendor-table-card">
+
+                    <div class="table-responsive">
+                        <table class="vendor-table">
+
+                            <thead>
+                                <tr>
+                                    <th>SUB-ORDER</th>
+                                    <th>CUSTOMER</th>
+                                    <th>ITEMS</th>
+                                    <th>TOTAL</th>
+                                    <th>COMMISSION</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>SO-4821-A</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Omid Ranjbar</strong>
+                                            <span>18 Sep, 10:24</span>
+                                        </div>
+                                    </td>
+                                    <td>2 items</td>
+                                    <td><strong>AFN 87,750</strong></td>
+                                    <td class="commission-value">− AFN 13,163</td>
+                                    <td><span class="order-status packed">Packed</span></td>
+                                    <td><button class="table-action" type="button">Mark shipped</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>SO-4820-C</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Sahar Nazari</strong>
+                                            <span>18 Sep, 09:02</span>
+                                        </div>
+                                    </td>
+                                    <td>1 item</td>
+                                    <td><strong>AFN 3,250</strong></td>
+                                    <td class="commission-value">− AFN 488</td>
+                                    <td><span class="order-status shipped">Shipped</span></td>
+                                    <td><button class="table-action" type="button">Track</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>SO-4818-A</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Bilal Amiri</strong>
+                                            <span>17 Sep, 16:41</span>
+                                        </div>
+                                    </td>
+                                    <td>1 item</td>
+                                    <td><strong>AFN 21,700</strong></td>
+                                    <td class="commission-value">− AFN 3,255</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                    <td><button class="table-action" type="button">View</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>SO-4815-B</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Nadia Faizi</strong>
+                                            <span>17 Sep, 11:18</span>
+                                        </div>
+                                    </td>
+                                    <td>3 items</td>
+                                    <td><strong>AFN 11,150</strong></td>
+                                    <td class="commission-value">− AFN 1,673</td>
+                                    <td><span class="order-status pending">Pending</span></td>
+                                    <td><button class="table-action" type="button">Accept</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>SO-4813-A</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Hasib Rahimi</strong>
+                                            <span>16 Sep, 19:55</span>
+                                        </div>
+                                    </td>
+                                    <td>1 item</td>
+                                    <td><strong>AFN 5,400</strong></td>
+                                    <td class="commission-value">− AFN 810</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                    <td><button class="table-action" type="button">View</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>SO-4811-C</strong></td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <strong>Karim Yousufi</strong>
+                                            <span>16 Sep, 14:17</span>
+                                        </div>
+                                    </td>
+                                    <td>1 item</td>
+                                    <td><strong>AFN 46,800</strong></td>
+                                    <td class="commission-value">− AFN 0</td>
+                                    <td><span class="order-status cancelled">Cancelled</span></td>
+                                    <td><button class="table-action" type="button">View</button></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
